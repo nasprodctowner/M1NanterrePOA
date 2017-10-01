@@ -1,9 +1,10 @@
 package fr.paris10.m1miage.personnels;
 
 public abstract class EnseignantPermanent extends Enseignant {
+
     private String domaineRecherche;
 
-    EnseignantPermanent(String nom, String prenom, String id, CDI contrat, String domaineRecherche) {
+    public EnseignantPermanent(String nom, String prenom, String id, CDI contrat, String domaineRecherche) {
         super(nom, prenom, id, contrat);
         this.domaineRecherche = domaineRecherche;
     }

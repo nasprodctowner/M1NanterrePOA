@@ -5,7 +5,7 @@ abstract class Personnel {
     private final String prenom;
     private final String id;
 
-    Personnel(String nom, String prenom, String id) { //on met un package car on a pas besoin que qqun extérieur utilisant ce constructeur
+    public Personnel(String nom, String prenom, String id) { //on met un package car on a pas besoin que qqun extérieur utilisant ce constructeur
         this.nom = nom;
         this.prenom = prenom;
         this.id = id;

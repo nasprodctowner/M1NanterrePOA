@@ -4,8 +4,7 @@ import java.util.Date;
 
 public abstract class EnseignantTemporaire extends Enseignant {
 
-
-    EnseignantTemporaire(String nom, String prenom, String id, CDD contrat) {
+    public EnseignantTemporaire(String nom, String prenom, String id, CDD contrat) {
         super(nom, prenom, id, contrat);
     }
 
