@@ -7,7 +7,7 @@ public abstract class Contrat {
     private double salaire;
     private Date dateDebut;
 
-    Contrat(double salaire, Date dateDebut) {
+    public Contrat(double salaire, Date dateDebut) {
         this.salaire = salaire;
         this.dateDebut = dateDebut;
     }
