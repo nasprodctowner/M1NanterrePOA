@@ -5,15 +5,15 @@ import java.util.Date;
 public abstract class EnseignantTemporaire extends Enseignant {
 
 
-    public EnseignantTemporaire(String nom, String prenom, String id, CDD contrat) {
+    EnseignantTemporaire(String nom, String prenom, String id, CDD contrat) {
         super(nom, prenom, id, contrat);
     }
 
-    public Date finContrat(){
+    private Date finContrat(){
         return ((CDD)contrat).getDateFinContrat();
     }
 
     public String toString() {
-        return super.toString()+" "+"Salaire : "+this.getSalaire()+" Debut : "+this.getDebut()+" Fin : "+this.finContrat();
+        return super.toString()+" Fin : "+this.finContrat();
     }
 }

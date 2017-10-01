@@ -2,25 +2,25 @@ package fr.paris10.m1miage.personnels;
 
 import java.util.Date;
 
-public abstract class Enseignant extends Personnel { //abstrait car
+public abstract class Enseignant extends Personnel {
 
-    protected Contrat contrat;
+    final Contrat contrat;
 
     Enseignant(String nom, String prenom, String id, Contrat contrat) {
         super(nom, prenom, id);
         this.contrat = contrat;
     }
 
-    public double getSalaire(){
+    private double getSalaire(){
         return this.contrat.getSalaire();
     }
 
-    public Date getDebut(){
+    private Date getDebut(){
         return this.contrat.getDateDebut();
     }
 
     @Override
     public String toString(){
-        return super.toString()+" "+"Salaire : "+this.getSalaire()+" Debut : "+this.getDebut();
+        return super.toString()+" "+"Salaire: "+this.getSalaire()+" Debut: "+this.getDebut();
     }
 }

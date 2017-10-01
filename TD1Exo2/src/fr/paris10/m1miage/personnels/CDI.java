@@ -2,7 +2,7 @@ package fr.paris10.m1miage.personnels;
 
 import java.util.Date;
 
-public class CDI extends Contrat {
+class CDI extends Contrat {
     public CDI(double salaire, Date dateDebut) {
         super(salaire, dateDebut);
     }

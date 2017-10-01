@@ -2,7 +2,7 @@ package fr.paris10.m1miage.personnels;
 
 import java.util.Date;
 
-public class CDD extends Contrat {
+class CDD extends Contrat {
 
     private Date dateFinContrat;
 
@@ -15,7 +15,4 @@ public class CDD extends Contrat {
         return dateFinContrat;
     }
 
-    public void setDateFinContrat(Date dateFinContrat) {
-        this.dateFinContrat = dateFinContrat;
-    }
 }

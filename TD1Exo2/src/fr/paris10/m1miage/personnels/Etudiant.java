@@ -9,18 +9,13 @@ public class Etudiant extends Personnel {
         this.boursier = boursier;
     }
 
-    public String getBoursier() {
+    private String getBoursier() {
         return boursier;
-    }
-
-    public void setBoursier(String boursier) {
-        this.boursier = boursier;
     }
 
     @Override
     public String toString(){
-        return (super.toString()+" Boursier : "+this.getBoursier());
+        return super.toString()+" Boursier: "+this.getBoursier();
     }
-
 
 }
