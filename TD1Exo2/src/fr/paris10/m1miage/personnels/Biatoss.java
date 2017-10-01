@@ -5,8 +5,8 @@ import java.util.Date;
 public class Biatoss extends Personnel {
     private final Contrat contrat;
 
-    public Biatoss(String nom, String prenom, String id, CDD contrat) {
-        super(nom, prenom, id);
+    public Biatoss(String nom, String prenom, String id, CDD contrat, Departement departement) {
+        super(nom, prenom, id, departement);
         this.contrat = contrat;
     }
 

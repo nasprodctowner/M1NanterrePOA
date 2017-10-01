@@ -6,8 +6,8 @@ public abstract class Enseignant extends Personnel {
 
     final Contrat contrat;
 
-    public Enseignant(String nom, String prenom, String id, Contrat contrat) {
-        super(nom, prenom, id);
+    public Enseignant(String nom, String prenom, String id, Contrat contrat, Departement departement) {
+        super(nom, prenom, id, departement);
         this.contrat = contrat;
     }
 

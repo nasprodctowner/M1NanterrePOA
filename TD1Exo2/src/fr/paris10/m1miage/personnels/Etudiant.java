@@ -4,8 +4,8 @@ public class Etudiant extends Personnel {
 
     private String boursier;
 
-    public Etudiant(String nom, String prenom, String id, String boursier) {
-        super(nom, prenom, id);
+    public Etudiant(String nom, String prenom, String id, String boursier, Departement departement) {
+        super(nom, prenom, id, departement);
         this.boursier = boursier;
     }
 
