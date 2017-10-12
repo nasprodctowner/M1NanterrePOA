@@ -2,8 +2,6 @@ package fr.paris10.m1miage.rps;
 
 import org.testng.annotations.*;
 
-import java.awt.print.Paper;
-
 import static org.testng.Assert.*;
 
 public class RockPaperScissorsTest {
@@ -102,4 +100,6 @@ public class RockPaperScissorsTest {
     public void testAllData ( RPSEnum p1 , RPSEnum p2, Result result ){
         assertEquals(rps.play(p1,p2),result);
     }
+
+
 }

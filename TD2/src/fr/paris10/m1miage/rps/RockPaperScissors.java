@@ -30,4 +30,11 @@ public class RockPaperScissors {
        }
        return Result.TIE;
     }
+
+    Result play(Player p1, Player p2){
+        if (p1.getNextMove().equals(RPSEnum.PAPER)&& p2.getNextMove().equals(RPSEnum.PAPER)){
+        return Result.TIE;
+        }
+        return null;
+    }
 }
