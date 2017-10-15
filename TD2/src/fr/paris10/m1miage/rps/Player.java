@@ -3,12 +3,11 @@ package fr.paris10.m1miage.rps;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class Player {
     private String nom;
     private int score;
-    private List<RPSEnum> mouvements;
+    public List<RPSEnum> mouvements;
     private int nbMouvements;
 
     public Player(String nom, List<RPSEnum> mouvements) {
@@ -20,20 +19,16 @@ public class Player {
     public Player(String nom) {
         this.nom = nom;
         this.nbMouvements = 10;
-        this.mouvements = new ArrayList<RPSEnum>();
+        this.mouvements = new ArrayList<>();
+        this.score = 0;
 
         for(int i=0; i<nbMouvements; i++){
            this.mouvements.add(RPSEnum.getRandom());
         }
     }
 
-    public RPSEnum getNextMove(){
-        Iterator iterator = mouvements.iterator();
-
-        while (iterator.hasNext()) {
-            return (RPSEnum) iterator.next();
-        }
-        return null;
+    public RPSEnum getNextMove(int i){
+        return mouvements.get(i);
     }
 
     public String getNom() {
