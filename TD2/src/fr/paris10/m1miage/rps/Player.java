@@ -23,12 +23,12 @@ public class Player {
         this.mouvements = new ArrayList<>();
         this.score = 0;
 
-        for(int i=0; i<nbMouvements; i++){
-           this.mouvements.add(RPSEnum.getRandom());
+        for (int i = 0; i < nbMouvements; i++) {
+            this.mouvements.add(RPSEnum.getRandom());
         }
     }
 
-    public RPSEnum getNextMove(int i){
+    public RPSEnum getNextMove(int i) {
         return mouvements.get(i);
     }
 
