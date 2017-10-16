@@ -31,15 +31,15 @@ public class RockPaperScissors {
 
     Result play(Player p1, Player p2) {
         for (int i = 0; i < p1.getNbMouvements(); i++) {
-                if (play(p1.getNextMove(i), p2.getNextMove(i)).equals(Result.TIE)) {
+                if (this.play(p1.getNextMove(i), p2.getNextMove(i)).equals(Result.TIE)) {
                     p1.setScore(p1.getScore() + 1);
-                    p2.setScore(p1.getScore() + 1);
+                    p2.setScore(p2.getScore() + 1);
 
-                } else if (play(p1.getNextMove(i), p2.getNextMove(i)).equals(Result.WIN)) {
+                } else if (this.play(p1.getNextMove(i), p2.getNextMove(i)).equals(Result.WIN)) {
                     p1.setScore(p1.getScore() + 1);
 
                 }
-                else if(play(p1.getNextMove(i),p2.getNextMove(i)).equals(Result.LOST)){
+                else if(this.play(p1.getNextMove(i),p2.getNextMove(i)).equals(Result.LOST)){
                     p2.setScore(p2.getScore() + 1);
                 }
         }

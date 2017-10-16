@@ -1,6 +1,10 @@
 package fr.paris10.m1miage.rps;
 
+import com.sun.org.apache.regexp.internal.RE;
 import org.testng.annotations.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.testng.Assert.*;
 
@@ -8,32 +12,41 @@ public class RockPaperScissorsTest {
 
 
     RockPaperScissors rps;
-
+    List<RPSEnum> lp1,lp2;
+    Player p1,p2;
+    Result res;
     @BeforeMethod
-    public void setUp() throws Exception {
+    public void setUpClass() throws Exception {
         rps = new RockPaperScissors();
+        lp1 = new ArrayList<>();
+        lp2 = new ArrayList<>();
     }
 
     @AfterMethod
     public void tearDown() throws Exception {
         rps = null;
+        lp1 = null;
+        lp2 = null;
+        p1 = null;
+        p2 = null;
+        res = null;
     }
 
-    @Parameters({"paper","rock"})
+    @Parameters({"wer9a","hadjra"})
     @Test
     public void testWinPlay(String p1, String p2) throws Exception {
         assertEquals(rps.play(RPSEnum.valueOf(p1),RPSEnum.valueOf(p2)),Result.WIN);
     }
 
-    @Parameters({"paper","paper"})
+    @Parameters({"wer9a","wer9a"})
     @Test
-    public void testTiePLay(String p1, String p2){
+    public void testTiePLay(String p1, String p2)throws Exception {
         assertEquals(rps.play(RPSEnum.valueOf(p1),RPSEnum.valueOf(p2)),Result.TIE);
     }
 
-    @Parameters({"paper","scissors"})
+    @Parameters({"wer9a","m9as"})
     @Test
-    public void testLostPlay(String p1, String p2){
+    public void testLostPlay(String p1, String p2)throws Exception {
         assertEquals(rps.play(RPSEnum.valueOf(p1),RPSEnum.valueOf(p2)),Result.LOST);
     }
 
@@ -99,6 +112,50 @@ public class RockPaperScissorsTest {
     @Test ( dataProvider = "allData")
     public void testAllData ( RPSEnum p1 , RPSEnum p2, Result result ){
         assertEquals(rps.play(p1,p2),result);
+    }
+
+
+    @Test
+    public void testLostPlayer1()throws Exception {
+
+
+        lp1.add(RPSEnum.SCISSORS);
+        lp2.add(RPSEnum.ROCK);
+
+        p1 = new Player("nas",lp1);
+        p2 = new Player("sim",lp2);
+
+        res = rps.play(p1,p2);
+
+        assertEquals(res,Result.LOST);
+    }
+
+    @Test
+    public void testWinPlayer1()throws Exception {
+
+        lp1.add(RPSEnum.SCISSORS);
+        lp2.add(RPSEnum.PAPER);
+
+        p1 = new Player("nas",lp1);
+        p2 = new Player("sim",lp2);
+
+        res = rps.play(p1,p2);
+
+        assertEquals(res,Result.WIN);
+    }
+
+    @Test
+    public void testTIEPlayer1()throws Exception {
+
+        lp1.add(RPSEnum.PAPER);
+        lp2.add(RPSEnum.PAPER);
+
+        p1 = new Player("nas",lp1);
+        p2 = new Player("sim",lp2);
+
+        res = rps.play(p1,p2);
+
+        assertEquals(res,Result.TIE);
     }
 
 

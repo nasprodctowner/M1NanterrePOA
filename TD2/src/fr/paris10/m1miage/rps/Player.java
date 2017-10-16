@@ -14,6 +14,7 @@ public class Player {
         this.nom = nom;
         this.mouvements = mouvements;
         this.score = 0;
+        this.nbMouvements = mouvements.size();
     }
 
     public Player(String nom) {

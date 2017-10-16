@@ -1,8 +1,5 @@
 package fr.paris10.m1miage.rps;
 
-import javax.xml.bind.SchemaOutputResolver;
-import java.util.Iterator;
-
 public class Principal {
     public static void main(String[] args){
 
