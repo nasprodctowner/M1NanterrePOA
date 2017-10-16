@@ -20,7 +20,6 @@ public class Principal {
         System.out.println("Apres " + p1.getNbMouvements() + " rounds on a :");
         System.out.println(p1.getNom() + " a obtenu un score de : " + p1.getScore());
         System.out.println(p2.getNom() + " a obtenu un score de : " + p2.getScore());
-
         System.out.println(p1.getNom() + " a obtenu le resultat : " + resultat);
 
 
