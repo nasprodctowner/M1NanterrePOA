@@ -21,7 +21,7 @@ public class Tests {
         System.out.println(s1.perimeter() + " " + s1.surface());
 
         Shape2D s2 = f.createRectangle(p2_1, 20, 30);
-        System.out.println(s2); // square
+        System.out.println(s2); // rectangle
         //
         Shape2D r1 = f.createRectangle();
         System.out.println(r1); // rectangle
