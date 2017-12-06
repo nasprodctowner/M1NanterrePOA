@@ -41,5 +41,6 @@ public class Tests {
         Shape3D k1 = f.createCuboid(p3_1, 10, 20, 30);
         System.out.println(k1); // cuboid
         System.out.println(k1.volume() + " " + k1.surface());
+
     }
 }
