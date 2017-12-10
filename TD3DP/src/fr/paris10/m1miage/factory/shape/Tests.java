@@ -25,7 +25,7 @@ public class Tests {
         //
         Shape2D r1 = f.createRectangle();
         System.out.println(r1); // rectangle
-        System.out.println(r1.perimeter() + " " + s1.surface());
+        System.out.println(r1.perimeter() + " " + r1.surface());
         //
 
         Shape3D c1 = f.createCone(p3_1, 10, 20);
